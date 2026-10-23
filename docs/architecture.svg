@@ -1,113 +1,173 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1060" viewBox="0 0 1600 1060">
+<svg xmlns="http://www.w3.org/2000/svg" width="1672" height="941" viewBox="0 0 1672 941">
 <defs>
-  <style>
-    .title{font:700 30px Arial,sans-serif;fill:#172554}.subtitle{font:16px Arial,sans-serif;fill:#475569}
-    .head{font:700 22px Arial,sans-serif;fill:#16223b}.subhead{font:700 16px Arial,sans-serif;fill:#16223b}
-    .text{font:15px Arial,sans-serif;fill:#243247}.small{font:13px Arial,sans-serif;fill:#475569}.ip{font:700 16px Arial,sans-serif;fill:#075985}
-    .vpcA{fill:#effaf1;stroke:#25a244;stroke-width:2.5}.vpcB{fill:#fff3f2;stroke:#e24a45;stroke-width:2.5}
-    .public{fill:#f4f9e9;stroke:#78b82a;stroke-width:2;stroke-dasharray:7 5}.private{fill:#eaf6ff;stroke:#48a7e8;stroke-width:2;stroke-dasharray:7 5}
-    .route{fill:#f7f3ff;stroke:#8b5cf6;stroke-width:2}.inst{fill:#fff;stroke:#f28c28;stroke-width:2}
-    .line{stroke:#334155;stroke-width:3;fill:none}.purple{stroke:#7c3aed;stroke-width:4;fill:none}
-    .green{stroke:#16a34a;stroke-width:4;fill:none}.blue{stroke:#2563eb;stroke-width:4;fill:none}
-    .routehead{font:700 17px Arial,sans-serif;fill:#5b21b6}.mono{font:14px Consolas,monospace;fill:#1e293b}
-  </style>
-  <marker id="arrow" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#334155"/></marker>
-  <marker id="purpleArrow" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#7c3aed"/></marker>
-  <marker id="greenArrow" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#16a34a"/></marker>
-  <marker id="blueArrow" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#2563eb"/></marker>
+ <style>
+  .title{font:700 27px Arial,sans-serif;fill:#171e2c}
+  .vpcTitle{font:700 26px Arial,sans-serif;fill:#26104f}
+  .subnetTitle{font:700 18px Arial,sans-serif;fill:#172033}
+  .label{font:700 17px Arial,sans-serif;fill:#111827}
+  .text{font:16px Arial,sans-serif;fill:#18253b}
+  .small{font:14px Arial,sans-serif;fill:#263649}
+  .ip{font:700 17px Arial,sans-serif;fill:#0874d1}
+  .purpleText{font:700 18px Arial,sans-serif;fill:#5316a9}
+  .mono{font:15px Arial,sans-serif;fill:#172033}
+  .vpcA{fill:#fff;fill-opacity:.7;stroke:#7c3aed;stroke-width:2}
+  .vpcB{fill:#fff;fill-opacity:.7;stroke:#7c3aed;stroke-width:2}
+  .public{fill:#f1f8e8;stroke:#7abf37;stroke-width:1.5}
+  .private{fill:#e7f7fa;stroke:#19b9d1;stroke-width:1.5}
+  .route{fill:#f5efff;stroke:#8b5cf6;stroke-width:1.7}
+  .routeHead{fill:#e9dcff;stroke:#a78bfa;stroke-width:1}
+  .grid{stroke:#a78bfa;stroke-width:1;fill:none}
+  .flow{stroke:#20242c;stroke-width:2.2;fill:none}
+  .peer{stroke:#7c3aed;stroke-width:3.5;fill:none}
+ </style>
+ <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#20242c"/></marker>
+ <marker id="purpleArrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#7c3aed"/></marker>
+ <marker id="greenArrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#16803c"/></marker>
+ <marker id="blueArrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#2563eb"/></marker>
 </defs>
-<rect width="1600" height="1060" fill="#fff"/>
-<text x="40" y="43" class="title">AWS VPC Peering — EWB Project</text>
-<text x="40" y="72" class="subtitle">Actual observed environment • us-east-1 (N. Virginia) • private connectivity between two VPCs</text>
-<!-- Internet / IGW -->
-<rect x="38" y="91" width="1524" height="485" rx="18" fill="#fbfdff" stroke="#64748b" stroke-width="1.5" stroke-dasharray="8 6"/>
-<text x="58" y="120" class="subhead">AWS Region: us-east-1</text>
-<rect x="70" y="145" width="745" height="405" rx="16" class="vpcA"/>
-<text x="94" y="180" class="head">VPC A — 10.10.0.0/16</text>
-<text x="94" y="203" class="small">vpc-094290dd996bdde79</text>
-<rect x="92" y="220" width="280" height="300" rx="12" class="public"/>
-<text x="108" y="248" class="subhead">Public Subnet A</text>
-<text x="108" y="270" class="text">10.10.1.0/24</text>
-<text x="108" y="290" class="small">subnet-0bca7727144ff4450</text>
-<rect x="113" y="316" width="238" height="181" rx="10" class="inst"/>
-<text x="132" y="345" class="subhead">Bastion Host · EC2</text>
-<text x="132" y="374" class="ip">Private: 10.10.1.10</text>
-<text x="132" y="399" class="ip">Public: 32.192.245.103</text>
-<text x="132" y="424" class="small">i-080bd656190adfe0c</text>
-<text x="132" y="455" class="small">SSH entry point</text>
-<!-- IGW to bastion -->
-<rect x="98" y="81" width="236" height="43" rx="10" fill="#eef2ff" stroke="#7c3aed" stroke-width="1.5"/>
-<text x="216" y="108" text-anchor="middle" class="subhead">Internet Gateway</text>
-<path d="M216 124 L216 143 L216 312" class="line" marker-end="url(#arrow)"/>
-<text x="235" y="139" class="small">0.0.0.0/0</text>
-<!-- Private app A -->
-<rect x="397" y="220" width="395" height="300" rx="12" class="private"/>
-<text x="415" y="248" class="subhead">Private Subnet A</text>
-<text x="415" y="270" class="text">10.10.2.0/24</text>
-<text x="415" y="290" class="small">subnet-08c38e5c7cf56cf16</text>
-<rect x="426" y="316" width="336" height="181" rx="10" class="inst"/>
-<text x="446" y="345" class="subhead">App-A · EC2</text>
-<text x="446" y="376" class="ip">Private IP: 10.10.2.108</text>
-<text x="446" y="402" class="small">i-005788d06eff77db3</text>
-<text x="446" y="435" class="small">No public IPv4 observed</text>
-<path d="M351 404 L425 404" class="line" marker-end="url(#arrow)"/>
-<text x="388" y="388" text-anchor="middle" class="small">SSH</text>
-<text x="388" y="422" text-anchor="middle" class="small">(via bastion)</text>
+<rect width="1672" height="941" fill="#fff"/>
+<!-- laptop and internet -->
+<g stroke="#263548" stroke-width="3" fill="none">
+ <rect x="42" y="20" width="61" height="43" rx="3"/><path d="M34 70 H112 L103 78 H44 Z"/>
+ <path d="M143 47 H225" stroke-width="2" marker-end="url(#arrow)"/>
+ <path d="M272 35 C263 35 258 42 259 50 C248 52 246 68 258 73 H332 C347 71 350 52 337 47 C334 34 320 30 311 37 C303 19 282 21 272 35Z"/>
+</g>
+<text x="73" y="98" text-anchor="middle" class="label">Your Laptop</text>
+<text x="73" y="119" text-anchor="middle" class="text">(Internet)</text>
+<text x="298" y="58" text-anchor="middle" class="label">Internet</text>
+<!-- region boundary -->
+<rect x="20" y="100" width="1620" height="744" rx="14" fill="none" stroke="#334e68" stroke-width="1.5" stroke-dasharray="6 5"/>
+<g>
+ <rect x="30" y="120" width="62" height="52" rx="6" fill="#142a48"/>
+ <text x="61" y="153" text-anchor="middle" font-family="Arial,sans-serif" font-weight="700" font-size="24" fill="#fff">aws</text>
+ <text x="108" y="142" class="title">AWS Region</text>
+ <text x="108" y="166" class="text">us-east-1 (N. Virginia)</text>
+</g>
+<!-- VPC A -->
+<rect x="28" y="195" width="810" height="690" rx="3" class="vpcA"/>
+<rect x="28" y="195" width="73" height="70" fill="#6d28d9"/>
+<path d="M42 237 C31 236 33 219 45 219 C49 202 68 208 71 220 C83 215 92 225 86 236 Z" stroke="#fff" stroke-width="2.2" fill="none"/>
+<text x="124" y="233" class="vpcTitle">VPC A</text>
+<text x="124" y="260" class="vpcTitle">10.10.0.0/16</text>
+<!-- internet gateway symbol and route to bastion -->
+<g transform="translate(315 164)">
+ <circle cx="0" cy="0" r="32" fill="#fff" stroke="#8b5cf6" stroke-width="3.5"/>
+ <path d="M-15 14 V-11 Q0 -24 15 -11 V14 M-7 14 V-7 Q0 -13 7 -7 V14" stroke="#8b5cf6" stroke-width="4" fill="none"/>
+</g>
+<text x="363" y="169" class="label">Internet Gateway</text>
+<path d="M315 133 V96" class="flow" marker-end="url(#arrow)"/>
+<path d="M315 196 V343 H242 V385" class="flow" marker-end="url(#arrow)"/>
+<!-- public subnet -->
+<rect x="47" y="286" width="388" height="328" rx="1" class="public"/>
+<rect x="61" y="299" width="40" height="40" rx="4" fill="#4d9d10"/>
+<path d="M72 318 v-7 a9 9 0 0 1 18 0 v7 M69 318 h24 v13 h-24 z M81 322 v4" stroke="#fff" stroke-width="2" fill="none"/>
+<text x="114" y="316" class="subnetTitle">Public Subnet (A)</text>
+<text x="114" y="340" class="text">10.10.1.0/24</text>
+<rect x="72" y="367" width="345" height="232" rx="7" fill="#fff" fill-opacity=".6"/>
+<!-- bastion instance icon -->
+<g transform="translate(245 421)" fill="#f27c00" stroke="#f27c00" stroke-width="4">
+ <rect x="-39" y="-35" width="78" height="70" rx="2"/>
+ <path d="M-49 -25 H-39 M-49 -9 H-39 M-49 7 H-39 M-49 23 H-39 M39 -25 H49 M39 -9 H49 M39 7 H49 M39 23 H49 M-25 -45 V-35 M-9 -45 V-35 M7 -45 V-35 M23 -45 V-35 M-25 35 V45 M-9 35 V45 M7 35 V45 M23 35 V45"/>
+</g>
+<g transform="translate(245 421)" stroke="#fff" stroke-width="3" fill="none">
+ <rect x="-25" y="-24" width="50" height="47" rx="2"/>
+ <path d="M-19 -30 H19 M-19 29 H19 M-31 -18 V18 M31 -18 V18"/>
+</g>
+<text x="245" y="506" text-anchor="middle" class="label">Bastion Host</text>
+<text x="245" y="529" text-anchor="middle" class="text">EC2 (Public IP)</text>
+<text x="245" y="552" text-anchor="middle" class="text">Private IP: <tspan class="ip">10.10.1.10</tspan></text>
+<text x="245" y="576" text-anchor="middle" class="text">Public IP: <tspan class="ip">32.192.245.103</tspan></text>
+<!-- private subnet A -->
+<rect x="461" y="286" width="354" height="328" rx="1" class="private"/>
+<rect x="474" y="299" width="40" height="40" rx="4" fill="#0ba9b7"/>
+<path d="M484 318 v-7 a9 9 0 0 1 18 0 v7 M481 318 h24 v13 h-24 z M493 322 v4" stroke="#fff" stroke-width="2" fill="none"/>
+<text x="527" y="316" class="subnetTitle">Private Subnet (A)</text>
+<text x="527" y="340" class="text">10.10.2.0/24</text>
+<rect x="479" y="367" width="318" height="232" rx="7" fill="#fff" fill-opacity=".5"/>
+<g transform="translate(635 421)" fill="#f27c00" stroke="#f27c00" stroke-width="4">
+ <rect x="-39" y="-35" width="78" height="70" rx="2"/>
+ <path d="M-49 -25 H-39 M-49 -9 H-39 M-49 7 H-39 M-49 23 H-39 M39 -25 H49 M39 -9 H49 M39 7 H49 M39 23 H49 M-25 -45 V-35 M-9 -45 V-35 M7 -45 V-35 M23 -45 V-35 M-25 35 V45 M-9 35 V45 M7 35 V45 M23 35 V45"/>
+</g>
+<g transform="translate(635 421)" stroke="#fff" stroke-width="3" fill="none">
+ <rect x="-25" y="-24" width="50" height="47" rx="2"/>
+ <path d="M-19 -30 H19 M-19 29 H19 M-31 -18 V18 M31 -18 V18"/>
+</g>
+<text x="635" y="506" text-anchor="middle" class="label">App-A</text>
+<text x="635" y="529" text-anchor="middle" class="text">EC2 (Private)</text>
+<text x="635" y="552" text-anchor="middle" class="text">Private IP: <tspan class="ip">10.10.2.108</tspan></text>
+<path d="M294 442 H568" class="flow" marker-end="url(#arrow)"/>
+<text x="432" y="424" text-anchor="middle" class="label">SSH</text>
+<text x="432" y="445" text-anchor="middle" class="text">(via Bastion)</text>
+<!-- peering center -->
+<text x="958" y="266" text-anchor="middle" class="label">VPC Peering</text>
+<text x="958" y="288" text-anchor="middle" class="label">Connection</text>
+<text x="958" y="311" text-anchor="middle" class="ip">pcx-0cf7c6b7b06ee3eeb</text>
+<text x="958" y="334" text-anchor="middle" font-family="Arial,sans-serif" font-weight="700" font-size="17" fill="#16803c">(Active)</text>
+<g transform="translate(958 405)">
+ <circle cx="0" cy="0" r="43" fill="#fff" stroke="#7c3aed" stroke-width="3.5"/>
+ <path d="M-23 0 Q0 -26 23 0 Q0 26 -23 0 M0 -35 V35 M-35 0 H35" fill="none" stroke="#7c3aed" stroke-width="3"/>
+ <path d="M0 -35 l-6 8 M0 -35 l6 8 M0 35 l-6 -8 M0 35 l6 -8 M-35 0 l8 -6 M-35 0 l8 6 M35 0 l-8 -6 M35 0 l-8 6" fill="none" stroke="#7c3aed" stroke-width="3"/>
+</g>
+<path d="M797 405 H914" class="peer"/>
+<path d="M1001 405 H1071" class="peer"/>
+<path d="M797 457 H1116" stroke="#16803c" stroke-width="3" fill="none" marker-end="url(#greenArrow)"/>
+<path d="M1116 483 H797" stroke="#2563eb" stroke-width="3" fill="none" marker-end="url(#blueArrow)"/>
+<text x="957" y="511" text-anchor="middle" class="label">Private Traffic</text>
+<text x="957" y="533" text-anchor="middle" class="text">10.10.0.0/16 ↔ 10.20.0.0/16</text>
 <!-- VPC B -->
-<rect x="1052" y="145" width="485" height="405" rx="16" class="vpcB"/>
-<text x="1078" y="180" class="head">VPC B — 10.20.0.0/16</text>
-<text x="1078" y="203" class="small">vpc-05463d53d9e3da06c</text>
-<rect x="1078" y="220" width="433" height="300" rx="12" class="private"/>
-<text x="1096" y="248" class="subhead">Private Subnet B</text>
-<text x="1096" y="270" class="text">10.20.1.0/24</text>
-<text x="1096" y="290" class="small">subnet-034834e10587f4b19</text>
-<rect x="1103" y="316" width="382" height="181" rx="10" class="inst"/>
-<text x="1124" y="345" class="subhead">App-B · EC2</text>
-<text x="1124" y="376" class="ip">Private IP: 10.20.1.226</text>
-<text x="1124" y="402" class="small">i-03eb8ec8840385621</text>
-<text x="1124" y="435" class="small">No public IPv4 observed</text>
-<!-- Peering -->
-<rect x="833" y="183" width="199" height="112" rx="12" fill="#f5f3ff" stroke="#8b5cf6" stroke-width="2"/>
-<text x="932" y="210" text-anchor="middle" class="subhead">VPC Peering</text>
-<text x="932" y="232" text-anchor="middle" class="small">Active</text>
-<text x="932" y="254" text-anchor="middle" class="small">pcx-0cf7c6b7b06ee3eeb</text>
-<circle cx="932" cy="405" r="47" fill="#fff" stroke="#7c3aed" stroke-width="3"/>
-<path d="M901 405 Q932 373 963 405 Q932 437 901 405" fill="none" stroke="#7c3aed" stroke-width="3"/>
-<path d="M792 375 L884 375" class="purple" marker-end="url(#purpleArrow)"/>
-<path d="M979 375 L1078 375" class="purple" marker-end="url(#purpleArrow)"/>
-<path d="M792 420 L1077 420" class="green" marker-end="url(#greenArrow)"/>
-<path d="M1077 446 L792 446" class="blue" marker-end="url(#blueArrow)"/>
-<text x="932" y="475" text-anchor="middle" class="small">Private traffic</text>
-<text x="932" y="494" text-anchor="middle" class="small">10.10.0.0/16 ⇄ 10.20.0.0/16</text>
-<!-- route table panels -->
-<rect x="38" y="598" width="492" height="278" rx="12" class="route"/>
-<text x="58" y="631" class="routehead">VPC A Public Route Table</text>
-<text x="58" y="655" class="small">rtb-0bffd516469dc9220</text>
-<rect x="56" y="677" width="456" height="32" fill="#e9ddff" stroke="#c4b5fd"/>
-<text x="70" y="698" class="subhead">Destination</text><text x="274" y="698" class="subhead">Target</text>
-<line x1="56" y1="709" x2="512" y2="709" stroke="#a78bfa"/><text x="70" y="733" class="text">10.10.0.0/16</text><text x="274" y="733" class="text">local</text>
-<line x1="56" y1="745" x2="512" y2="745" stroke="#c4b5fd"/><text x="70" y="769" class="text">0.0.0.0/0</text><text x="274" y="769" class="text">Internet Gateway</text>
-<line x1="56" y1="781" x2="512" y2="781" stroke="#c4b5fd"/><text x="70" y="805" class="text">10.20.0.0/16</text><text x="274" y="805" class="text">pcx-0cf7c6b7b06ee3eeb</text>
-<text x="58" y="849" class="small">Associated with public subnet A</text>
-<rect x="554" y="598" width="492" height="278" rx="12" class="route"/>
-<text x="574" y="631" class="routehead">VPC A Private Route Table</text>
-<text x="574" y="655" class="small">rtb-0df315a397a97459a</text>
-<rect x="572" y="677" width="456" height="32" fill="#e9ddff" stroke="#c4b5fd"/>
-<text x="586" y="698" class="subhead">Destination</text><text x="790" y="698" class="subhead">Target</text>
-<line x1="572" y1="709" x2="1028" y2="709" stroke="#a78bfa"/><text x="586" y="733" class="text">10.10.0.0/16</text><text x="790" y="733" class="text">local</text>
-<line x1="572" y1="745" x2="1028" y2="745" stroke="#c4b5fd"/><text x="586" y="769" class="text">10.20.0.0/16</text><text x="790" y="769" class="small">pcx-0cf7c6b7b06ee3eeb</text>
-<text x="574" y="849" class="small">Associated with private subnet A</text>
-<rect x="1070" y="598" width="492" height="278" rx="12" class="route"/>
-<text x="1090" y="631" class="routehead">VPC B Private Route Table</text>
-<text x="1090" y="655" class="small">rtb-0e04e73e930ddf38c</text>
-<rect x="1088" y="677" width="456" height="32" fill="#e9ddff" stroke="#c4b5fd"/>
-<text x="1102" y="698" class="subhead">Destination</text><text x="1306" y="698" class="subhead">Target</text>
-<line x1="1088" y1="709" x2="1544" y2="709" stroke="#a78bfa"/><text x="1102" y="733" class="text">10.20.0.0/16</text><text x="1306" y="733" class="text">local</text>
-<line x1="1088" y1="745" x2="1544" y2="745" stroke="#c4b5fd"/><text x="1102" y="769" class="text">10.10.0.0/16</text><text x="1306" y="769" class="small">pcx-0cf7c6b7b06ee3eeb</text>
-<text x="1090" y="849" class="small">Associated with private subnet B</text>
-<rect x="38" y="900" width="1524" height="116" rx="12" fill="#f8fafc" stroke="#cbd5e1"/>
-<text x="58" y="930" class="subhead">Connectivity evidence</text>
-<text x="58" y="957" class="text">• SSH to App-B uses the bastion as a jump host; App-B has no public IPv4 address.</text>
-<text x="58" y="982" class="text">• Observed ping tests between App-A (10.10.2.108) and App-B (10.20.1.226) returned 4/4 replies after rules were corrected.</text>
-<text x="58" y="1004" class="small">Keep the private key on your laptop. Do not upload PEM files or AWS credentials to GitHub.</text>
+<rect x="1070" y="195" width="557" height="690" rx="3" class="vpcB"/>
+<rect x="1070" y="195" width="73" height="70" fill="#6d28d9"/>
+<path d="M1084 237 C1073 236 1075 219 1087 219 C1091 202 1110 208 1113 220 C1125 215 1134 225 1128 236 Z" stroke="#fff" stroke-width="2.2" fill="none"/>
+<text x="1165" y="233" class="vpcTitle">VPC B</text>
+<text x="1165" y="260" class="vpcTitle">10.20.0.0/16</text>
+<rect x="1145" y="286" width="460" height="328" rx="1" class="private"/>
+<rect x="1160" y="299" width="40" height="40" rx="4" fill="#0996df"/>
+<path d="M1170 318 v-7 a9 9 0 0 1 18 0 v7 M1167 318 h24 v13 h-24 z M1179 322 v4" stroke="#fff" stroke-width="2" fill="none"/>
+<text x="1213" y="316" class="subnetTitle">Private Subnet (B)</text>
+<text x="1213" y="340" class="text">10.20.1.0/24</text>
+<rect x="1170" y="367" width="410" height="232" rx="7" fill="#fff" fill-opacity=".5"/>
+<g transform="translate(1374 421)" fill="#f27c00" stroke="#f27c00" stroke-width="4">
+ <rect x="-39" y="-35" width="78" height="70" rx="2"/>
+ <path d="M-49 -25 H-39 M-49 -9 H-39 M-49 7 H-39 M-49 23 H-39 M39 -25 H49 M39 -9 H49 M39 7 H49 M39 23 H49 M-25 -45 V-35 M-9 -45 V-35 M7 -45 V-35 M23 -45 V-35 M-25 35 V45 M-9 35 V45 M7 35 V45 M23 35 V45"/>
+</g>
+<g transform="translate(1374 421)" stroke="#fff" stroke-width="3" fill="none">
+ <rect x="-25" y="-24" width="50" height="47" rx="2"/>
+ <path d="M-19 -30 H19 M-19 29 H19 M-31 -18 V18 M31 -18 V18"/>
+</g>
+<text x="1374" y="506" text-anchor="middle" class="label">App-B</text>
+<text x="1374" y="529" text-anchor="middle" class="text">EC2 (Private)</text>
+<text x="1374" y="552" text-anchor="middle" class="text">Private IP: <tspan class="ip">10.20.1.226</tspan></text>
+<text x="1374" y="576" text-anchor="middle" class="small">Instance ID: i-03eb8ec8840385621</text>
+<!-- direct app to app traffic lines -->
+<path d="M691 455 H1316" class="flow" marker-end="url(#arrow)"/>
+<path d="M1316 482 H691" class="flow" marker-end="url(#arrow)"/>
+<!-- Route tables row -->
+<rect x="50" y="632" width="383" height="216" rx="7" class="route"/>
+<text x="68" y="659" class="purpleText">VPC A Public Route Table</text>
+<text x="68" y="683" class="text">rtb-0bffd516469dc9220</text>
+<rect x="66" y="699" width="351" height="32" class="routeHead"/>
+<text x="80" y="721" class="subhead">Destination</text><text x="245" y="721" class="subhead">Target</text>
+<path d="M66 731 H417 M66 765 H417 M66 799 H417 M66 833 H417 M229 699 V833" class="grid"/>
+<text x="80" y="754" class="mono">10.10.0.0/16</text><text x="245" y="754" class="mono">local</text>
+<text x="80" y="788" class="mono">0.0.0.0/0</text><text x="245" y="788" class="mono">Internet Gateway</text>
+<text x="80" y="822" class="mono">10.20.0.0/16</text><text x="245" y="822" font-family="Arial,sans-serif" font-size="13" fill="#075985">pcx-0cf7c6b7b06ee3eeb</text>
+
+<rect x="460" y="632" width="363" height="216" rx="7" class="route"/>
+<text x="477" y="659" class="purpleText">VPC A Private Route Table</text>
+<text x="477" y="683" class="text">rtb-0df315a397a97459a</text>
+<rect x="476" y="699" width="331" height="32" class="routeHead"/>
+<text x="490" y="721" class="subhead">Destination</text><text x="645" y="721" class="subhead">Target</text>
+<path d="M476 731 H807 M476 779 H807 M476 827 H807 M631 699 V827" class="grid"/>
+<text x="490" y="760" class="mono">10.10.0.0/16</text><text x="645" y="760" class="mono">local</text>
+<text x="490" y="808" class="mono">10.20.0.0/16</text><text x="645" y="808" font-family="Arial,sans-serif" font-size="13" fill="#075985">pcx-0cf7c6b7b06ee3eeb</text>
+
+<rect x="1145" y="632" width="460" height="216" rx="7" class="route"/>
+<text x="1163" y="659" class="purpleText">VPC B Private Route Table</text>
+<text x="1163" y="683" class="text">rtb-0e04e73e930ddf38c</text>
+<rect x="1161" y="699" width="428" height="32" class="routeHead"/>
+<text x="1175" y="721" class="subhead">Destination</text><text x="1354" y="721" class="subhead">Target</text>
+<path d="M1161 731 H1589 M1161 779 H1589 M1161 827 H1589 M1340 699 V827" class="grid"/>
+<text x="1175" y="760" class="mono">10.20.0.0/16</text><text x="1354" y="760" class="mono">local</text>
+<text x="1175" y="808" class="mono">10.10.0.0/16</text><text x="1354" y="808" font-family="Arial,sans-serif" font-size="13" fill="#075985">pcx-0cf7c6b7b06ee3eeb</text>
+<text x="835" y="909" text-anchor="middle" class="small">Architecture recreated from the supplied diagram using verified lab IP addresses, subnet CIDRs, resource IDs and routing details.</text>
 </svg>
