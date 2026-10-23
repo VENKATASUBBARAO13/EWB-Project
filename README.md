@@ -92,6 +92,5 @@ See [`report/PROJECT_REPORT.md`](report/PROJECT_REPORT.md) for the longer implem
 
 ## Before submission
 
-- Add your preferred student name/batch details to the report if required.
-- Re-check the live AWS console before describing resource state as current.
-- Do not claim cleanup is complete until the EC2 instances, routes, peering connection, and other lab resources have actually been removed.
+Name: VENTRAPRAGADA VENKATA SUBBARAO
+Batch: AWS INTERNSHIP BATCH 1.1
