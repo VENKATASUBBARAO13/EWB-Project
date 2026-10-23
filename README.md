@@ -241,7 +241,5 @@ The complete screenshot set is stored in the `Screenshots/` folder. Expand this 
 
 ## Before final submission
 
-- Add the student's full name and batch.
-- Verify all resource IDs and route associations in the live AWS Console.
-- Capture cleanup evidence after the lab resources have actually been deleted.
-- Ensure the bastion SSH inbound rule is restricted to your current public IPv4 `/32`; do not leave SSH open to `0.0.0.0/0`.
+- VENTRAPRAGADA VENKATA SUBBARAO
+- AWS INTERNSHIP BATCH 1.1
