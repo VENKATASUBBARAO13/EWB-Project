@@ -8,6 +8,8 @@ A hands-on AWS networking project demonstrating private communication between tw
 
 **Region:** US East (N. Virginia) — `us-east-1`
 
+See the [AWS VPC peering architecture diagram](ARCHITECTURE.md).
+
 - **VPC A:** `10.10.0.0/16` (`vpc-094290dd996bdde79`)
   - Public subnet: `10.10.1.0/24`
   - Bastion: private `10.10.1.10`, public `32.192.245.103`
@@ -58,23 +60,23 @@ The workbook's example host IPs differed from AWS-assigned addresses for App-A a
 
 ## Project report
 
-See [report/PROJECT_REPORT.md](report/PROJECT_REPORT.md) for the report, traffic-path explanation, route tables, verification outcomes, and finalization checklist.
+See [report/PROJECT_REPORT.md](report/PROJECT_REPORT.md) for traffic-path explanations, route tables, verification outcomes, and finalization checklist.
 
 ## Key concepts demonstrated
 
-- Non-overlapping VPC CIDRs
-- Public/private subnets and explicit route-table associations
-- Active peering with forward and return routes
+- Non-overlapping VPC CIDR ranges
+- Public and private subnet routing
+- Active VPC peering and routes in both directions
 - Security-group controls for SSH and ICMP
 - Private SSH access through a bastion without copying the private key to an EC2 instance
-- Negative testing and recovery after a security-rule change
+- Negative testing and recovery by changing an ICMP inbound rule
 
 ## Before final submission
 
 - Fill in student name and batch in the report.
 - Verify IDs and route associations against live AWS state.
-- Add selected screenshots to this repository (after reviewing them for sensitive information).
+- Add selected screenshots to this repository after reviewing them for sensitive information.
 - Add cleanup screenshots only after the lab resources are actually removed.
 - Never commit PEM/private keys, passwords, AWS credentials, or tokens.
 
-**Security reminder:** this is a public repository. Review any screenshots before uploading, and ensure the bastion SSH security group is restricted to your current public IP `/32`, not `0.0.0.0/0`.
+**Security reminder:** this is a public repository. Ensure the bastion SSH security group is restricted to your current public IP `/32`, not `0.0.0.0/0`.
