@@ -58,33 +58,33 @@ The repository keeps **12 selected screenshots** rather than a large dump of rep
 
 ### Network and routing
 
-![01 — Active VPC peering](Screenshots/01-peering-connection-active.webp)
+![01 — Active VPC peering](Main_Screenshots/01-peering-connection-active.webp)
 
-![02 — VPC and subnet configuration](Screenshots/02-subnets-and-network-configuration.webp)
+![02 — VPC and subnet configuration](Main_Screenshots/02-subnets-and-network-configuration.webp)
 
-![03 — VPC A public routes](Screenshots/03-vpc-a-public-route-table.webp)
+![03 — VPC A public routes](Main_Screenshots/03-vpc-a-public-route-table.webp)
 
-![04 — VPC A private routes](Screenshots/04-vpc-a-private-route-table.png)
+![04 — VPC A private routes](Main_Screenshots/04-vpc-a-private-route-table.png)
 
-![05 — VPC B private routes](Screenshots/05-vpc-b-private-route-table.webp)
+![05 — VPC B private routes](Main_Screenshots/05-vpc-b-private-route-table.webp)
 
 ### EC2 and security configuration
 
-![06 — Bastion details](Screenshots/06-bastion-instance-details.png)
+![06 — Bastion details](Main_Screenshots/06-bastion-instance-details.png)
 
-![07 — App-A details](Screenshots/07-app-a-instance-details.png)
+![07 — App-A details](Main_Screenshots/07-app-a-instance-details.png)
 
-![08 — App-B details](Screenshots/08-app-b-instance-details.png)
+![08 — App-B details](Main_Screenshots/08-app-b-instance-details.png)
 
-![09 — App-B security group rules](Screenshots/09-app-b-security-group-rules.png)
+![09 — App-B security group rules](Main_Screenshots/09-app-b-security-group-rules.png)
 
 ### Connectivity proof
 
-![10 — SSH through bastion and cross-VPC test](Screenshots/10-ssh-via-bastion-cross-vpc-test.png)
+![10 — SSH through bastion and cross-VPC test](Main_Screenshots/10-ssh-via-bastion-cross-vpc-test.png)
 
-![11 — Successful App-B to App-A ping](Screenshots/11-app-b-to-app-a-ping-success.webp)
+![11 — Successful App-B to App-A ping](Main_Screenshots/11-app-b-to-app-a-ping-success.webp)
 
-![12 — Controlled ICMP failure and recovery](Screenshots/12-icmp-failure-and-recovery.webp)
+![12 — Controlled ICMP failure and recovery](Main_Screenshots/12-icmp-failure-and-recovery.webp)
 
 ## Project report
 
