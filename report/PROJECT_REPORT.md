@@ -1,7 +1,7 @@
 # AWS VPC Peering Project Report — EWB
 
-**Student:** Add your full name  
-**Batch:** Add your batch  
+**Student:** VENTRAPRAGADA VENKATA SUBBARAO  
+**Batch:** AWS INTERNSHIP BATCH 1.1  
 **Region:** US East (N. Virginia), `us-east-1`
 
 ## 1. Objective
